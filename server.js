@@ -69,6 +69,7 @@ var htmlTemplate =
          <title>
          ${title}
          </title>
+         <link href=" /ui/style.css" rel="stylesheet"/>
     </head>
     <body>
         <div>
@@ -81,7 +82,7 @@ var htmlTemplate =
               ${date}
             </h4>
         </div>
-        <div>
+        <div class="container">
            ${content}
         </div>
     </body>
