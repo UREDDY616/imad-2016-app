@@ -9,8 +9,57 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var content = {
+    title : 'article-one',
+    heading : 'article-one',
+    date : 'sep 05',
+    contenr : 
+        `<p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p>
+             <p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p>
+             <p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p> `
+}
+
+function createTemplate(data)
+{
+var title = data.title;
+var date = data.date;
+var heading=data.heading;
+var conntent=data.content;
+var htmlTemplate = 
+`<html>
+    <head>
+         <title>
+         ${title}
+         </title>
+    </head>
+    <body>
+        <div>
+            <a href='/'>home</a>
+            <hr/>
+            <h2>
+               ${heading}
+            </h2>
+            <h4>
+              ${date}
+            </h4>
+        </div>
+        <div>
+           ${content}
+        </div>
+    </body>
+</html>`;
+return htmlTemplate;
+}
+
+
 app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.send(createTemplate(article-one));
 });
 app.get('/article-two', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
