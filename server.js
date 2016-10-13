@@ -13,7 +13,7 @@ var articleone = {
     title : 'article-one',
     heading : 'article-one',
     date : 'sep 05',
-    contenr : 
+    content : 
         `<p>
                 hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
             </p>
