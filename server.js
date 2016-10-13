@@ -9,7 +9,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var articleone = {
+var articles = {
+    'articleone' : {
     title : 'article-one',
     heading : 'article-one',
     date : 'sep 05',
@@ -23,6 +24,37 @@ var articleone = {
              <p>
                 hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
             </p> `
+},
+    'articletwo' : {
+         title : 'article-two',
+    heading : 'article-two',
+    date : 'sep 10',
+    content : 
+        `<p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p>
+             <p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p>
+             <p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p> `
+    },
+    'articlethree' : {
+         title : 'article-three',
+    heading : 'article-three',
+    date : 'sep 15',
+    content : 
+        `<p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p>
+             <p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p>
+             <p>
+                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
+            </p> `
+    }
 }
 
 function createTemplate(data)
@@ -58,8 +90,9 @@ return htmlTemplate;
 }
 
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleone));
+app.get('/:articleName', function (req, res) {
+    var articleName=req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 app.get('/article-two', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
