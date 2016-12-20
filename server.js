@@ -11,9 +11,9 @@ app.get('/', function (req, res) {
 });
 
 var articles = {
-    'nithisha' : {
-    title : 'nithisha',
-    heading : 'nithisha',
+    'article-one' : {
+    title : 'article-one',
+    heading : 'article-one',
     date : 'sep 05',
     content : 
         `<p>
