@@ -168,7 +168,7 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
              <h1 id="myImage">Happy New Year</h1>
          </div>
          
-         <button>Click to fade in/out boxes</button><br><br>
+         <button onclick="move()">Click to fade in/out boxes</button><br><br>
 
 <div id="div1" style="width:80px;height:80px;background-color:red;">2</div>
 <br>
@@ -224,8 +224,8 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
 
 
   <script>
-    $(document).ready(function(){
-    $("button").click(function(){
+    $(document).ready(function move(){
+    $("button").click(function move(){
     var div = $("div");  
         div.animate({left: '200px'}, "slow");
         div.animate({fontSize: '3em'}, "slow");
