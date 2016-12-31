@@ -33,7 +33,177 @@
       
       <style>
       
-body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwUSbROL6nizK-wlVEqZWGVE8mxuGolQ988isiKBCs0wBsyumZDQ");}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+@-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
+
+ #stage {
+    margin: 1em auto;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+
+ #spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+  }
+
+  #spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  
+  }
+  #spinner img {
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: black;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+  }
+body{background-image: url(""https://i.ytimg.com/vi/WFVcTDp-vBU/maxresdefault.jpg");}
+      
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+div.cities {
+    background-color: black;
+    color: white;
+    margin: 20px 0 200px 0;
+    padding: 20px;
+}
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 0;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 3em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 150px;
+    border-left: 1px solid gray;
+    padding: 10em;
+    overflow: hidden;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+      
+
 #myContainer {
   width: 400px;
   height: 400px;
@@ -49,12 +219,24 @@ body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9
 </style>
      </head>
      <body>
+         <header>
+  <ul>
+  <li>
+<a class="active" href="#home" >Home </a>
+  </li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+
+</ul>
+
+
+</header>
           <script>
               alert("hello iam uday")
           </script>
          <div>
-             <a href='/'>home</a>
-             <hr/>
+             
              <form>
              <input type="button" value="Click Me" onclick="getValue();" />
             </form>
