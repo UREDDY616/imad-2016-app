@@ -3,19 +3,7 @@
           <title>
           article-one
           </title>
-          <script>
-    $(document).ready(function(){
-    $("button").click(function(){
-    var div = $("div");  
-        div.animate({left: '200px'}, "slow");
-        div.animate({fontSize: '3em'}, "slow");
-        $("#div1").fadeToggle();
-        $("#div2").fadeToggle("slow");
-        $("#div3").fadeToggle(3000);
-         $("#div4").fadeToggle(6000);
-    });
-});
-</script>
+        
           <script type="text/javascript">
          <!--
             var imgObj = null;
@@ -170,15 +158,7 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
              <img src="https://i.ytimg.com/vi/WFVcTDp-vBU/maxresdefault.jpg" height="600px" width="800px" border="2px"/> 
              <p>Demonstrate fadeToggle() with different speed parameters.</p>
 
-<button>Click to fade in/out boxes</button><br><br>
 
-<div id="div1" style="width:80px;height:80px;background-color:red;">2</div>
-<br>
-<div id="div2" style="width:80px;height:80px;background-color:green;">0</div>
-<br>
-<div id="div3" style="width:80px;height:80px;background-color:blue;">1</div>
-<br>
-<div id="div4" style="width:80px;height:80px;background-color:yellow;">7</div>
              <h3>Advance</h3>
              <form>
          <h1 id="myImage">Happy New Year</h1>
@@ -187,6 +167,16 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
       </form>
              <h1 id="myImage">Happy New Year</h1>
          </div>
+         
+         <button>Click to fade in/out boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;">2</div>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:green;">0</div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;">1</div>
+<br>
+<div id="div4" style="width:80px;height:80px;background-color:yellow;">7</div>
          <p>
         <button onclick="myMove()">Click Me</button> 
         </p>
@@ -233,7 +223,19 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
 </div>
 
 
-
+  <script>
+    $(document).ready(function(){
+    $("button").click(function(){
+    var div = $("div");  
+        div.animate({left: '200px'}, "slow");
+        div.animate({fontSize: '3em'}, "slow");
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+         $("#div4").fadeToggle(6000);
+    });
+});
+</script>
 
 
 
