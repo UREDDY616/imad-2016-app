@@ -7,6 +7,25 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
             
         </script>
+        
+        
+        
+        <script> 
+        $(document).ready(function(){
+            $("button").click(function(){
+           
+                $("div").animate({
+                    left: '250px',
+                    height: '+=150px',
+                    width: '+=150px'
+                });
+                 var div = $("div");  
+                div.animate({left: '100px'}, "slow");
+                div.animate({fontSize: '10em'}, "slow");
+            });
+        });
+        </script>
+
          <script>
          $(document).ready(function move(){
             $("button").click(function move(){
@@ -209,6 +228,9 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
     <p id="spinner" style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px; background: rgba(0,0,0,0.5); text-align: center; color: yellow; font-size: 400%"> Happy   New   Year   2017</p>
     </div>
     
+    <button>Start Animation</button>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;">2017</div>
     <div id="flip">click here please</div>
     <div id="panel">wish you and your family a very very happy new year 2017</div>
     
@@ -218,12 +240,6 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
            
 
 
-             <h3>Advance</h3>
-             <form>
-         <h1 id="myImage">Happy New Year</h1>
-         
-         <input type="button" value="Click Me" onclick="moveRight();" />
-      </form>
             
          </div>
           <div>
@@ -255,9 +271,7 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
 <div id="div7" style="width:300px;height:300px;display:none;background-color:blue;">1</div>
 <br>
 <div id="div8" style="width:300px;height:300px;display:none;background-color:yellow;">7</div>
-         <p>
-        <button onclick="myMove()">Click Me</button> 
-        </p>
+         
         
         <div id ="myContainer">
         <div id ="myAnimation"></div>
@@ -306,23 +320,7 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
 
 
         
-        <script>
-        function myMove() {
-          var elem = document.getElementById("myAnimation");   
-          var pos = 0;
-          var id = setInterval(frame, 10);
-          function frame() {
-            if (pos == 350) {
-              clearInterval(id);
-            } else {
-              pos++; 
-              elem.style.top = pos + 'px'; 
-              elem.style.left = pos + 'px'; 
-            }
-          }
-        }
-        
-        </script>
+    
          
  +        <script type="text/javascript" src="/ui/main.js">
  +            
