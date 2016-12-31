@@ -1,31 +1,308 @@
-<html>
-    <head>
-         <title>
-         article-one
-         </title>
-         
-    </head>
-    <body>
-        <div>
-            <a href='/'>home</a>
-            <hr/>
-            <h2>
-                article-one
-            </h2>
-            <h4>
-                oct 10 2016
-            </h4>
-        </div>
-        <div class="container">
-            <p>
-                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
-            </p>
-             <p>
-                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
-            </p>
-             <p>
-                hello this is my  first article. hello this is my  first article hello this is my  first article. hello this is my  first article hello this is my  first article hello this is my  first article hello this is my  first article
-            </p>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<style>
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+@-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
+
+ #stage {
+    margin: 1em auto;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+  }
+
+ #spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+  }
+
+  #spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  
+  }
+  #spinner img {
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: black;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+  }
+body{background-image: url("ll.jpg");}
+      
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+div.cities {
+    background-color: black;
+    color: white;
+    margin: 20px 0 200px 0;
+    padding: 20px;
+}
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 0;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 3em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 150px;
+    border-left: 1px solid gray;
+    padding: 10em;
+    overflow: hidden;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+</style>
+</head>
+<body >
+
+<div class="container">
+
+<header>
+  <ul>
+  <li>
+<a class="active" href="#home" >Home </a>
+  </li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+
+</ul>
+
+
+</header>
+  <nav>
+
+
+<script>
+function light(sw) {
+    var pic;
+    if (sw == 0) {
+        pic = "dd2.jpg"
+    }
+
+ 
+ else {
+        pic = "dd3.jpg"
+    }
+    document.getElementById('myImage').src = pic;
+}
+</script>
+
+<div class="dropdown">
+  <img id="myImage" src="dd1.jpg" alt="Trolltunga Norway" width="200" height="200">
+
+  <div class="dropdown-content">
+    <img src="dd1.jpg" alt="Trolltunga Norway" width="400" height="400">
+ 
+    <div class="desc">Deepak sandrana the Mr universe</div>
+  </div>
+</div>
+
+<p>
+<button type="button" onclick="light(1)">class</button>
+<button type="button" onclick="iframe_a">mass</button>
+</p>
+
+ 
+  <ul>
+    <li><a href="#"> Deepak Sandrana</a></li>
+    <li><a href="#">champion</a></li>
+    <li><a href="#">vizag</a></li>
+  </ul>
+</nav>
+
+<article>
+<div id="stage" style="background: rgba(0,0,0,0.5);">
+<p id="spinner" style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px; background: rgba(0,0,0,0.5); text-align: center; color: yellow; font-size: 300%"> Happy Birthday Deepak sandrana</p>
+</div>
+<iframe height="500px" width="100%" src=" Deepak.mp4" name="iframe_a"></iframe>
+  <h1>friends</h1>
+  <p>London is the capital city of England. It is the most populous city in the  United Kingdom,London is the capital city of England. It is the most populous city in the  United Kingdom,London is the capital city of England. It is the most populous city in the  United Kingdom,London is the capital city of England. It is the most populous city in the  United Kingdom,London is the capital city of England. It is the most populous city in the  United Kingdom,London is the capital city of England. It is the most populous city in the  United Kingdom,London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+
+<div class="cities">
+<h2>London</h2>
+<p>London is the capital of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+<p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+</div>
+
+<div id="stage" style="padding-left: 180px; height: 500px; width:100%;">
+<div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+<img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;" src="d18.jpg" width="400" height="400" alt="">
+<img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;" src="d21.jpg" width="400" height="400" alt="">
+<img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;" src="d4.jpg" width="400" height="400" alt="">
+<img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;" src="d5.jpg" width="400" height="400" alt="">
+<img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;" src="d10.jpg" width="400" height="400" alt="">
+</div>
+</div>
+
+<div id="stage" style="padding-left: 180px; height: 300px; width:100%;">
+<div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+<p id="spinner" style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 0px; background: rgba(0,0,0,0); text-align: center; color: yellow; font-size: 300%">Happy <img  src="d19.jpg" alt="Trolltunga Norway" width="200" height="200"></p>
+</div>
+</div>
+
+<div id="stage" style="padding-left: 180px; height: 300px; width:100%;">
+<div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+<p id="spinner" style="-webkit-transform: rotateX(-72deg) translateX(180px); padding: 0 0 0 0px; background: rgba(0,0,0,0); text-align: center; color: red; font-size: 300%"> Birthday <img  src="d20.jpg" alt="Trolltunga Norway" width="200" height="200"> </p>
+</div>
+</div>
+
+<div id="stage" style="padding-left: 180px; height: 300px; width:100%;">
+<div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+<p id="spinner" style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 0px; background: rgba(0,0,0,0); text-align: center; color: green; font-size: 300%"> Deepak <img  src="d22.jpg" alt="Trolltunga Norway" width="200" height="200"></p>
+</div>
+</div>
+
+<div id="stage" style="padding-left: 180px; height: 300px; width:100%;">
+<div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+<p id="spinner" style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 0px; background: rgba(0,0,0,0); text-align: center; color: blue; font-size: 300%"> Showik <img  src="d30.jpg" alt="Trolltunga Norway" width="200" height="200"></p>
+</div>
+</div>
+
+<div id="stage" style="padding-left: 180px; height: 500px; width:100%;">
+<div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+<img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;" src="d23.jpg" width="400" height="400" alt="">
+<img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;" src="d24.jpg" width="400" height="400" alt="">
+<img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;" src="d25.jpg" width="400" height="400" alt="">
+<img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;" src="d26.jpg" width="400" height="400" alt="">
+<img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;" src="d27.jpg" width="400" height="400" alt="">
+</div>
+</div>
+
+
+
+
+</article>
+
+<footer> © leaveit.com</footer>
+
+</div>
+
+
+</body>
+
 </html>
+
+
