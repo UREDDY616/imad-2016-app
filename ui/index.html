@@ -46,7 +46,19 @@
             }
          //-->
       </script>
-      
+      <style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 100px;
+    display: none;
+}
+</style>
       
       <style>
       
@@ -162,14 +174,11 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
           <div id="stage" style="background: rgba(0,0,0,0.5);">
     <p id="spinner" style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px; background: rgba(0,0,0,0.5); text-align: center; color: yellow; font-size: 300%"> Happy   New   Year   2017</p>
     </div>
-         <div>
-             <iframe height="500px" width="100%" src="https://i.ytimg.com/vi/WFVcTDp-vBU/maxresdefault.jpg" name="iframe_a"></iframe>
-             <form>
-             <input type="button" value="Click Me" onclick="getValue();" />
-            </form>
-            
-            
-         </div>
+    
+    <div id="flip">Click to slide the panel down or up</div>
+    <div id="panel">Hello world!</div>
+    
+        
          <div class="container">
              <img src="https://i.ytimg.com/vi/WFVcTDp-vBU/maxresdefault.jpg" height="600px" width="800px" border="2px"/> 
              <p>Demonstrate fadeToggle() with different speed parameters.</p>
@@ -181,7 +190,15 @@ body{background-image: url("http://il2.picdn.net/shutterstock/videos/2236546/thu
          
          <input type="button" value="Click Me" onclick="moveRight();" />
       </form>
-             <h1 id="myImage">Happy New Year</h1>
+            
+         </div>
+          <div>
+             <iframe height="500px" width="http://happynewyear2015i.com/wp-content/uploads/2016/02/happy-new-year-best-hd-pic-2017-e1455730714988.jpg" name="iframe_a"></iframe>
+             <form>
+             <input type="button" value="Click Me" onclick="getValue();" />
+            </form>
+            
+            
          </div>
          
          <button onclick="move()">Click to fade in/out boxes</button><br><br>
