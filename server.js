@@ -8,8 +8,8 @@ var express = require('express');
  app.get('/', function (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
  });
- app.get('/SriramReddy', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'SriramReddy.html'));
+ app.get('/SriramReddy_NewYearWishes', function (req, res) {
+   res.sendFile(path.join(__dirname, 'ui', 'SriramReddy_NewYearWishes.html'));
  });
  app.get('/ui/style.css', function (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'style.css'));
